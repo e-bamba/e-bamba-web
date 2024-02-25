@@ -1,21 +1,15 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import {NavSideBarLinkProp} from "./props";
+import {NavSideBarLinkItemContainer} from "./styles";
 
-export type NavSideBarLinkProp = {
-  isVisible: boolean;
-  href: string;
-  title: string;
-};
-
-export const NavSideBarLink = ({
-  href,
-  isVisible,
-  title,
-}: NavSideBarLinkProp) => {
-  return isVisible ? (
-    <li>
+export const NavSideBarLink = ({href, isVisible, title, icon}: NavSideBarLinkProp) =>
+  (isVisible ?
+    (<NavSideBarLinkItemContainer>
+      {icon}
       <Link to={href}>{title}</Link>
-    </li>
-  ) : (
-    <></>
-  );
-};
+    </NavSideBarLinkItemContainer>) : (<></>)
+  )
+
+export const createLink = (route: NavSideBarLinkProp) => (
+  <NavSideBarLink key={route.href} {...route} />
+);

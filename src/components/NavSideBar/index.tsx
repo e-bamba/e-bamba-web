@@ -1,5 +1,8 @@
-import { NavSideBarLink, NavSideBarLinkProp } from "./components";
+import {createLink} from "./components";
 import { NavSideBarContainer, NavSideBarLinks } from "./styles";
+import {NavSideBarLinkProp} from "./props";
+import Home from '@mui/icons-material/Home';
+import Paid from '@mui/icons-material/Paid';
 
 export default function NavSideBar() {
   const routes: Array<NavSideBarLinkProp> = [
@@ -7,11 +10,13 @@ export default function NavSideBar() {
       href: "/",
       isVisible: true,
       title: "Página inicial",
+      icon: <Home />
     },
     {
       href: "/alegacoes",
       isVisible: true,
       title: "Alegações",
+      icon: <Paid />
     },
   ];
 
@@ -21,7 +26,3 @@ export default function NavSideBar() {
     </NavSideBarContainer>
   );
 }
-
-const createLink = (route: NavSideBarLinkProp) => (
-  <NavSideBarLink key={route.href} {...route} />
-);

@@ -1,22 +1,48 @@
 import styled from "@emotion/styled";
 
 export const BalanceContainer = styled.div`
-  background-color: #242424;
-  display: flex;
-  padding: 5px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  ul {
+    border-radius: 15px;
+    background-color: #9f63aa;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 50px;
+  }
 `
 
-export const BalanceItemContainer = styled.div`
-  max-height: 150px;
-  height: 150px;
-  max-width: 150px;
-  width: 150px;
-  background-color: #424242;
+export const BalanceItemContainer = styled.li`
+  max-height: 40px;
+  height: 40px;
+  max-width: 200px;
+  width: 200px;
+  background-color: #bb00ff;
   display: flex;
   justify-self: center;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border-radius: 15px;
+`
+
+export const TransactionsContainer =  styled.div`
+  margin-top: 40px;
+`
+
+export const TransactionItemContainer = styled.li`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  
+  div {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 `
