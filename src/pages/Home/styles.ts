@@ -2,9 +2,10 @@ import styled from "@emotion/styled";
 
 export const BalanceContainer = styled.div`
   ul {
+    border-radius: 15px;
     background-color: #9f63aa;
     display: flex;
-    padding: 5px;
+    padding: 10px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +24,7 @@ export const BalanceItemContainer = styled.li`
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
-  color: #000;
+  border-radius: 15px;
 `
 
 export const TransactionsContainer =  styled.div`
